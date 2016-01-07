@@ -83,7 +83,7 @@
                                     <segment title="14%"/>
                                     <segment title="15%"/>
                                     <segment title="16%"/>
-                                    <segment title="17"/>
+                                    <segment title="17%"/>
                                     <segment title="Other"/>
                                 </segments>
                                 <connections>
@@ -183,9 +183,6 @@
                             </constraint>
                             <constraint firstItem="N58-T9-aF6" firstAttribute="firstBaseline" secondItem="edu-Rn-FzY" secondAttribute="firstBaseline" id="jML-dp-7dT"/>
                             <constraint firstItem="5Tw-fH-L7i" firstAttribute="top" secondItem="DYp-wJ-Sqd" secondAttribute="bottom" constant="93" id="kQd-Lp-D6N"/>
-                            <constraint firstItem="Mm2-3Z-jJ9" firstAttribute="leading" secondItem="tC9-vj-ufb" secondAttribute="leadingMargin" constant="21.5" id="lC0-Tp-nsr">
-                                <variation key="heightClass=regular-widthClass=compact" constant="95"/>
-                            </constraint>
                             <constraint firstItem="N58-T9-aF6" firstAttribute="top" secondItem="Mm2-3Z-jJ9" secondAttribute="bottom" constant="40" id="lQs-Nj-NaB">
                                 <variation key="heightClass=regular-widthClass=compact" constant="39"/>
                             </constraint>
@@ -228,7 +225,6 @@
                                 <exclude reference="KSh-0v-xrB"/>
                                 <exclude reference="Xf5-Ef-wjM"/>
                                 <exclude reference="gya-me-1zS"/>
-                                <exclude reference="lC0-Tp-nsr"/>
                                 <exclude reference="Npc-9d-yjU"/>
                                 <exclude reference="fB2-K1-RzL"/>
                                 <exclude reference="qzr-zi-BXi"/>
@@ -282,7 +278,6 @@
                                 <include reference="KSh-0v-xrB"/>
                                 <include reference="Xf5-Ef-wjM"/>
                                 <include reference="gya-me-1zS"/>
-                                <include reference="lC0-Tp-nsr"/>
                                 <include reference="Npc-9d-yjU"/>
                                 <include reference="fB2-K1-RzL"/>
                                 <include reference="qzr-zi-BXi"/>

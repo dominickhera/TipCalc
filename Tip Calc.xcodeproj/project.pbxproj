@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250CF7201C3E150F00F720FE /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250CF71F1C3E150F00F720FE /* SCLAlertView.swift */; };
 		25EC3CBD1C3C9B1600898F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC3CBC1C3C9B1600898F1E /* AppDelegate.swift */; };
 		25EC3CBF1C3C9B1600898F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC3CBE1C3C9B1600898F1E /* ViewController.swift */; };
 		25EC3CC21C3C9B1600898F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25EC3CC01C3C9B1600898F1E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250CF71F1C3E150F00F720FE /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		25EC3CB91C3C9B1600898F1E /* Tip Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25EC3CBC1C3C9B1600898F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25EC3CBE1C3C9B1600898F1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				25EC3CC31C3C9B1600898F1E /* Assets.xcassets */,
 				25EC3CC51C3C9B1600898F1E /* LaunchScreen.storyboard */,
 				25EC3CC81C3C9B1600898F1E /* Info.plist */,
+				250CF71F1C3E150F00F720FE /* SCLAlertView.swift */,
 			);
 			path = "Tip Calc";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25EC3CBF1C3C9B1600898F1E /* ViewController.swift in Sources */,
+				250CF7201C3E150F00F720FE /* SCLAlertView.swift in Sources */,
 				25EC3CBD1C3C9B1600898F1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,7 @@
 				25EC3CE31C3C9B1600898F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25EC3CE41C3C9B1600898F1E /* Build configuration list for PBXNativeTarget "Tip CalcTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				25EC3CE61C3C9B1600898F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25EC3CE71C3C9B1600898F1E /* Build configuration list for PBXNativeTarget "Tip CalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				25EC3CE91C3C9B1600898F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

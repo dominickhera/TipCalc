@@ -24,32 +24,36 @@ class ViewController: UIViewController {
     var costPerson: Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     @IBAction func tipSegmentChanged(sender: AnyObject) {
         switch (tipChoice.selectedSegmentIndex) {
         case 0:
-            print("first")
             tipField.text = ("14")
             break
         case 1:
-            print("second")
             tipField.text = ("15")
             break
             
         case 2:
-            print("third")
             tipField.text = ("16")
             break
         case 3:
-            print("fourth")
             tipField.text = ("17")
             break
         case 4:
-            print("fifth")
-           
+            let alert = SCLAlertView()
+            let txt = alert.addTextField("Custom tip value")
+            alert.addButton("Done") {
+                self.tipField.text = txt.text
+            }
+            alert.showCloseButton = false
+            alert.showEdit("Custom Tip Value", subTitle: "Enter your own custom tip value.")
             break
             
         default:
@@ -67,6 +71,7 @@ class ViewController: UIViewController {
         answer = (num! * realTip)
         costPerson = (answer/split!)
         
+        tipField.text = ("\(tip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
         
