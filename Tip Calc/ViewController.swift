@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tipChoice: UISegmentedControl!
-    @IBOutlet var pickerWheel: UIPickerView!
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var tipField: UILabel!
@@ -24,13 +23,16 @@ class ViewController: UIViewController {
     var costPerson: Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: "didTapView")
+        self.view.addGestureRecognizer(tapRecognizer)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    func didTapView(){
+        self.view.endEditing(true)
     }
+    
     @IBAction func tipSegmentChanged(sender: AnyObject) {
         switch (tipChoice.selectedSegmentIndex) {
         case 0:
