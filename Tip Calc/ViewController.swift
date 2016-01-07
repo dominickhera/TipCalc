@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController {
 
+    @IBOutlet weak var tipChoice: UISegmentedControl!
     @IBOutlet var pickerWheel: UIPickerView!
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var textField: UITextField!
@@ -21,14 +22,40 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var realTip: Double = 0
     var realAnswer: Double = 0
     var costPerson: Double = 0
-    let pickerData = ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pickerWheel.delegate = self
-        pickerWheel.dataSource = self
+
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    @IBAction func tipSegmentChanged(sender: AnyObject) {
+        switch (tipChoice.selectedSegmentIndex) {
+        case 0:
+            print("first")
+            tipField.text = ("14")
+            break
+        case 1:
+            print("second")
+            tipField.text = ("15")
+            break
+            
+        case 2:
+            print("third")
+            tipField.text = ("16")
+            break
+        case 3:
+            print("fourth")
+            tipField.text = ("17")
+            break
+        case 4:
+            print("fifth")
+           
+            break
+            
+        default:
+            print("unknown")
+        }
+        
     }
     @IBAction func mainButton(sender: AnyObject) {
         let num:Double? = Double(textField.text!)
@@ -44,24 +71,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         textLabel.text = (String(answer))
         
     }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        tipField.text = pickerData[row]
-        // let tip:Int? = Int(pickerData[row])
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
