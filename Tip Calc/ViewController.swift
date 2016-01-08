@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
+        
+        peopleCountField.text = "1"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -86,10 +89,12 @@ class ViewController: UIViewController {
         answer = (num! * realTip)
         costPerson = (answer/split!)
         realTipAmount = (num! * (subTip/100))
-        tipField.text = ("\(subTip)%")
+        
+            SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(NSDecimalNumber(double: costPerson))\nTip Amount: \(NSDecimalNumber(double: realTipAmount))\nTotal Cost: \(NSDecimalNumber(double: answer))")
+      /*  tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
-        tipAmount.text = ("\(realTipAmount)")
+        tipAmount.text = ("\(realTipAmount)")*/
         }
         
     }
