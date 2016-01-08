@@ -16,11 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet var tipField: UILabel!
     @IBOutlet var peopleCountField: UITextField!
     @IBOutlet var costPerPersonLabel: UILabel!
+    @IBOutlet weak var tipAmount: UILabel!
     
+    var subTip: Double = 0
     var answer: Double = 0
     var realTip: Double = 0
     var realAnswer: Double = 0
     var costPerson: Double = 0
+    var realTipAmount: Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapRecognizer = UITapGestureRecognizer()
@@ -36,23 +39,28 @@ class ViewController: UIViewController {
     @IBAction func tipSegmentChanged(sender: AnyObject) {
         switch (tipChoice.selectedSegmentIndex) {
         case 0:
-            tipField.text = ("14")
+            subTip = 10
+            tipField.text = ("10.0%")
             break
         case 1:
-            tipField.text = ("15")
+            subTip = 15
+            tipField.text = ("15.0%")
             break
             
         case 2:
-            tipField.text = ("16")
+            subTip = 16
+            tipField.text = ("16.0%")
             break
         case 3:
-            tipField.text = ("17")
+            subTip = 20
+            tipField.text = ("20.0%")
             break
         case 4:
             let alert = SCLAlertView()
             let txt = alert.addTextField("Custom tip value")
             alert.addButton("Done") {
-                self.tipField.text = txt.text
+                self.subTip = Double(txt.text!)!
+                self.tipField.text = ("\(txt.text)%")
             }
             alert.showCloseButton = false
             alert.showEdit("Custom Tip Value", subTitle: "Enter your own custom tip value.")
@@ -65,17 +73,24 @@ class ViewController: UIViewController {
     }
     @IBAction func mainButton(sender: AnyObject) {
         let num:Double? = Double(textField.text!)
-        let tip:Double? = Double(tipField.text!)
         let split:Double? = Double(peopleCountField.text!)
         
-        tipField.text = ("\(tip)%")
-        realTip = ((tip! / 100) + 1)
+        if num == nil {
+           SCLAlertView().showError("No Amount Entered", subTitle: "Please enter a meal cost.")
+        } else if subTip == 0 {
+            subTip = 10
+        } else if split == nil {
+           peopleCountField.text = "1"
+        } else {
+        realTip = ((subTip / 100) + 1)
         answer = (num! * realTip)
         costPerson = (answer/split!)
-        
-        tipField.text = ("\(tip)%")
+        realTipAmount = (num! * (subTip/100))
+        tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
+        tipAmount.text = ("\(realTipAmount)")
+        }
         
     }
     override func didReceiveMemoryWarning() {
