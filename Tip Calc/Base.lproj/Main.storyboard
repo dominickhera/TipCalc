@@ -180,12 +180,6 @@
                                 <color key="textColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="B4E-LA-zb0">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="734" width="320" height="66"/>
-                                </variation>
-                            </adBannerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-BR-1BB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -223,10 +217,8 @@
                             <constraint firstAttribute="bottom" secondItem="b3O-H7-fzO" secondAttribute="bottom" constant="264" id="DVI-Ou-gcE"/>
                             <constraint firstItem="5Tw-fH-L7i" firstAttribute="leading" secondItem="Drz-Nf-2Rn" secondAttribute="trailing" constant="15" id="DeU-zQ-lTU"/>
                             <constraint firstItem="b3O-H7-fzO" firstAttribute="leading" secondItem="tC9-vj-ufb" secondAttribute="leading" constant="158" id="Df5-tR-ubL"/>
-                            <constraint firstItem="B4E-LA-zb0" firstAttribute="leading" secondItem="tC9-vj-ufb" secondAttribute="leadingMargin" constant="20" id="Fyl-oa-jsV"/>
                             <constraint firstItem="edu-Rn-FzY" firstAttribute="leading" secondItem="N58-T9-aF6" secondAttribute="trailing" constant="12" id="HXH-zd-brH"/>
                             <constraint firstItem="SV4-OI-LAf" firstAttribute="leading" secondItem="hsQ-uL-Sfd" secondAttribute="trailing" constant="14" id="Kiq-pi-win"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="B4E-LA-zb0" secondAttribute="trailing" constant="20" id="NKZ-z9-5b7"/>
                             <constraint firstItem="cLu-Km-cED" firstAttribute="leading" secondItem="o1w-5k-vOn" secondAttribute="trailing" constant="21" id="StQ-bt-jHH"/>
                             <constraint firstAttribute="bottom" secondItem="Bne-BR-1BB" secondAttribute="bottom" constant="56" id="T6v-eP-cMM">
                                 <variation key="heightClass=regular-widthClass=compact" constant="74"/>
@@ -247,9 +239,6 @@
                             <constraint firstItem="cLu-Km-cED" firstAttribute="top" secondItem="5Tw-fH-L7i" secondAttribute="bottom" constant="19" id="iQg-37-BHx"/>
                             <constraint firstItem="N58-T9-aF6" firstAttribute="top" secondItem="b3O-H7-fzO" secondAttribute="bottom" constant="8" symbolic="YES" id="iVB-r7-WGq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Tw-fH-L7i" secondAttribute="trailing" constant="60" id="j1k-GZ-zbx"/>
-                            <constraint firstItem="B4E-LA-zb0" firstAttribute="top" secondItem="Bne-BR-1BB" secondAttribute="bottom" constant="6" id="jYi-Ax-MIQ">
-                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
-                            </constraint>
                             <constraint firstItem="Mm2-3Z-jJ9" firstAttribute="firstBaseline" secondItem="ul3-ar-Se6" secondAttribute="firstBaseline" id="lAN-bp-HVP"/>
                             <constraint firstItem="o1w-5k-vOn" firstAttribute="baseline" secondItem="cLu-Km-cED" secondAttribute="baseline" id="nW3-Bc-od1"/>
                             <constraint firstItem="5Tw-fH-L7i" firstAttribute="leading" secondItem="cLu-Km-cED" secondAttribute="leading" id="o1M-CQ-jgs"/>
@@ -277,7 +266,6 @@
                                 <exclude reference="cLu-Km-cED"/>
                                 <exclude reference="b3O-H7-fzO"/>
                                 <exclude reference="8Mx-RW-mr8"/>
-                                <exclude reference="B4E-LA-zb0"/>
                                 <exclude reference="Bne-BR-1BB"/>
                             </mask>
                             <mask key="constraints">
@@ -318,9 +306,6 @@
                                 <exclude reference="7yC-8J-vbD"/>
                                 <exclude reference="UMA-cW-wdS"/>
                                 <exclude reference="YAW-DI-Non"/>
-                                <exclude reference="Fyl-oa-jsV"/>
-                                <exclude reference="NKZ-z9-5b7"/>
-                                <exclude reference="jYi-Ax-MIQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -338,7 +323,6 @@
                                 <include reference="cLu-Km-cED"/>
                                 <include reference="b3O-H7-fzO"/>
                                 <include reference="8Mx-RW-mr8"/>
-                                <include reference="B4E-LA-zb0"/>
                                 <include reference="Bne-BR-1BB"/>
                             </mask>
                             <mask key="constraints">
@@ -379,9 +363,6 @@
                                 <include reference="7yC-8J-vbD"/>
                                 <include reference="UMA-cW-wdS"/>
                                 <include reference="YAW-DI-Non"/>
-                                <include reference="Fyl-oa-jsV"/>
-                                <include reference="NKZ-z9-5b7"/>
-                                <include reference="jYi-Ax-MIQ"/>
                             </mask>
                         </variation>
                     </view>

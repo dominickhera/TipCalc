@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Money
 
 class ViewController: UIViewController {
 
@@ -64,6 +65,7 @@ class ViewController: UIViewController {
             alert.addButton("Done") {
                 self.subTip = Double(txt.text!)!
                 self.tipField.text = ("\(txt.text)%")
+
             }
             alert.showCloseButton = false
             alert.showEdit("Custom Tip Value", subTitle: "Enter your own custom tip value.")
@@ -89,8 +91,13 @@ class ViewController: UIViewController {
         answer = (num! * realTip)
         costPerson = (answer/split!)
         realTipAmount = (num! * (subTip/100))
+            
+        let realAmount: Money = Money(answer)
+        let tipAmountMoney: Money = Money(realTipAmount)
+        let costPersonMoney: Money = Money(costPerson)
         
-            SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(NSDecimalNumber(double: costPerson))\nTip Amount: \(NSDecimalNumber(double: realTipAmount))\nTotal Cost: \(NSDecimalNumber(double: answer))")
+        
+            SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
       /*  tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
