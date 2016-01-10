@@ -19,6 +19,7 @@
 		67D7A6820D7AF710EA5FFF93 /* Pods_Tip_CalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C55D7D3BFB5770C5344EF19 /* Pods_Tip_CalcTests.framework */; };
 		A7600FB9209E2B4F96CFBE92 /* Pods_Tip_CalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDF5B16DEAC7F5309D2CBF7 /* Pods_Tip_CalcUITests.framework */; };
 		C502A33E6D62A63E0C7F9E7F /* Pods_Tip_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE5ACAD76A1A391B4E115B1 /* Pods_Tip_Calc.framework */; };
+		E6A779FA1C4308C20001E687 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A779F91C4308C20001E687 /* TargetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9BDF5B16DEAC7F5309D2CBF7 /* Pods_Tip_CalcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tip_CalcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19C9EEBC63B118D9E3B7595 /* Pods-Tip CalcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip CalcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tip CalcUITests/Pods-Tip CalcUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE25EA606ABDBEC4FB775AA6 /* Pods-Tip CalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip CalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tip CalcTests/Pods-Tip CalcTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6A779F91C4308C20001E687 /* TargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
 		FE6DBE810FA84E7AD03E6D77 /* Pods-Tip CalcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip CalcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tip CalcUITests/Pods-Tip CalcUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				25EC3CBC1C3C9B1600898F1E /* AppDelegate.swift */,
 				25EC3CBE1C3C9B1600898F1E /* ViewController.swift */,
 				25EC3CC01C3C9B1600898F1E /* Main.storyboard */,
+				E6A779F91C4308C20001E687 /* TargetViewController.swift */,
 				25EC3CC31C3C9B1600898F1E /* Assets.xcassets */,
 				25EC3CC51C3C9B1600898F1E /* LaunchScreen.storyboard */,
 				25EC3CC81C3C9B1600898F1E /* Info.plist */,
@@ -438,6 +441,7 @@
 				25EC3CBF1C3C9B1600898F1E /* ViewController.swift in Sources */,
 				250CF7201C3E150F00F720FE /* SCLAlertView.swift in Sources */,
 				25EC3CBD1C3C9B1600898F1E /* AppDelegate.swift in Sources */,
+				E6A779FA1C4308C20001E687 /* TargetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,9 @@
 
 import UIKit
 import Money
+import iAd
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ADInterstitialAdDelegate {
 
     @IBOutlet weak var tipChoice: UISegmentedControl!
     @IBOutlet var textLabel: UILabel!
@@ -25,13 +26,26 @@ class ViewController: UIViewController {
     var realAnswer: Double = 0
     var costPerson: Double = 0
     var realTipAmount: Double = 0
+    var interAd = ADInterstitialAd()
+    var interAdView: UIView = UIView()
+    let closeButton = UIButton(type: UIButtonType.System)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
-        
+        //UIViewController.prepareInterstitialAds()
         peopleCountField.text = "1"
+        
+        closeButton.frame = CGRectMake(10, 10, 20, 20)
+        closeButton.layer.cornerRadius = 10
+        closeButton.setTitle("x", forState: .Normal)
+        closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        closeButton.backgroundColor = UIColor.whiteColor()
+        closeButton.layer.borderColor = UIColor.blackColor().CGColor
+        closeButton.layer.borderWidth = 1
+        closeButton.addTarget(self, action: "close:", forControlEvents: UIControlEvents.TouchDown)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -76,7 +90,7 @@ class ViewController: UIViewController {
         }
         
     }
-    @IBAction func mainButton(sender: AnyObject) {
+    @IBAction func mainButton(sender: UIButton) {
         let num:Double? = Double(textField.text!)
         let split:Double? = Double(peopleCountField.text!)
         
@@ -96,13 +110,58 @@ class ViewController: UIViewController {
         let tipAmountMoney: Money = Money(realTipAmount)
         let costPersonMoney: Money = Money(costPerson)
         
-        
-            SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
+           /*let alertView = SCLAlertView()
+            alertView.addButton("Done") {
+               self.loadAd()
+            }*/
+            
+            let alert = SCLAlertView()
+            alert.addButton("Done") {
+               self.loadAd()
+                
+            }
+            alert.showCloseButton = false
+            alert.showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
+  tipField.text = ("\(subTip)%")
+
+            /*SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")*/
       /*  tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
         tipAmount.text = ("\(realTipAmount)")*/
         }
+        
+    }
+    
+    func loadAd() {
+        print("load ad")
+        interAd = ADInterstitialAd()
+        interAd.delegate = self
+    }
+    
+    func interstitialAdDidLoad(interstitialAd: ADInterstitialAd!) {
+        print("ad did load")
+        
+        interAdView = UIView()
+        interAdView.frame = self.view.bounds
+        view.addSubview(interAdView)
+        
+        interAd.presentInView(interAdView)
+        UIViewController.prepareInterstitialAds()
+        
+        interAdView.addSubview(closeButton)
+    }
+    
+    func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!) {
+        
+    }
+    
+    func interstitialAd(interstitialAd: ADInterstitialAd!, didFailWithError error: NSError!) {
+        print("failed to receive")
+        print(error.localizedDescription)
+        
+        closeButton.removeFromSuperview()
+        interAdView.removeFromSuperview()
         
     }
     override func didReceiveMemoryWarning() {
