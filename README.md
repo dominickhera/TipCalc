@@ -6,4 +6,5 @@ A tip calculator created by Dominick Hera
 
 
 Dependencies
+
 Money Framework - pod 'Money'
