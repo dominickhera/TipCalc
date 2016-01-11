@@ -38,14 +38,14 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         //UIViewController.prepareInterstitialAds()
         peopleCountField.text = "1"
         
-        closeButton.frame = CGRectMake(10, 10, 20, 20)
+        closeButton.frame = CGRectMake(10, 16, 20, 20)
         closeButton.layer.cornerRadius = 10
         closeButton.setTitle("x", forState: .Normal)
         closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         closeButton.backgroundColor = UIColor.whiteColor()
         closeButton.layer.borderColor = UIColor.blackColor().CGColor
         closeButton.layer.borderWidth = 1
-        closeButton.addTarget(self, action: "close:", forControlEvents: UIControlEvents.TouchDown)
+        closeButton.addTarget(self, action: "close", forControlEvents: UIControlEvents.TouchUpInside)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -109,11 +109,6 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         let realAmount: Money = Money(answer)
         let tipAmountMoney: Money = Money(realTipAmount)
         let costPersonMoney: Money = Money(costPerson)
-        
-           /*let alertView = SCLAlertView()
-            alertView.addButton("Done") {
-               self.loadAd()
-            }*/
             
             let alert = SCLAlertView()
             alert.addButton("Done") {
