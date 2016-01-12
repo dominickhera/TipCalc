@@ -118,8 +118,6 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
             alert.showCloseButton = false
             alert.showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
   tipField.text = ("\(subTip)%")
-
-            /*SCLAlertView().showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")*/
       /*  tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
