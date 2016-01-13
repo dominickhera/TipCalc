@@ -28,7 +28,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
     var realTipAmount: Double = 0
     var interAd = ADInterstitialAd()
     var interAdView: UIView = UIView()
-    let closeButton = UIButton(type: UIButtonType.System)
+    let otherCloseButton = UIButton(type: UIButtonType.System)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +38,22 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         //UIViewController.prepareInterstitialAds()
         peopleCountField.text = "1"
         
-        closeButton.frame = CGRectMake(10, 16, 20, 20)
-        closeButton.layer.cornerRadius = 10
-        closeButton.setTitle("x", forState: .Normal)
-        closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        closeButton.backgroundColor = UIColor.whiteColor()
-        closeButton.layer.borderColor = UIColor.blackColor().CGColor
-        closeButton.layer.borderWidth = 1
-        closeButton.addTarget(self, action: "close", forControlEvents: UIControlEvents.TouchUpInside)
+        otherCloseButton.frame = CGRectMake(10, 16, 20, 20)
+        otherCloseButton.layer.cornerRadius = 10
+        otherCloseButton.setTitle("x", forState: .Normal)
+        otherCloseButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        otherCloseButton.backgroundColor = UIColor.whiteColor()
+        otherCloseButton.layer.borderColor = UIColor.blackColor().CGColor
+        otherCloseButton.layer.borderWidth = 1
+        otherCloseButton.addTarget(self, action: "close:", forControlEvents: UIControlEvents.TouchDown)
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    func close(sender: UIButton) {
+        otherCloseButton.removeFromSuperview()
+        interAdView.removeFromSuperview()
     }
     
     func didTapView(){
@@ -142,7 +148,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         interAd.presentInView(interAdView)
         UIViewController.prepareInterstitialAds()
         
-        interAdView.addSubview(closeButton)
+        interAdView.addSubview(otherCloseButton)
     }
     
     func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!) {
@@ -153,7 +159,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         print("failed to receive")
         print(error.localizedDescription)
         
-        closeButton.removeFromSuperview()
+        otherCloseButton.removeFromSuperview()
         interAdView.removeFromSuperview()
         
     }
