@@ -83,9 +83,12 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
             let alert = SCLAlertView()
             let txt = alert.addTextField("Custom tip value")
             alert.addButton("Done") {
+                if txt.text == "" {
+                    SCLAlertView().showError("No Tip Amount Entered", subTitle: "Your tip amount was set to 10% by default.")
+                } else {
                 self.subTip = Double(txt.text!)!
                 self.tipField.text = ("\(txt.text)%")
-
+                }
             }
             alert.showCloseButton = false
             alert.showEdit("Custom Tip Value", subTitle: "Enter your own custom tip value.")
