@@ -36,7 +36,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
         //UIViewController.prepareInterstitialAds()
-        peopleCountField.text = "1"
+        //peopleCountField.text = "1"
         
         otherCloseButton.frame = CGRectMake(10, 16, 20, 20)
         otherCloseButton.layer.cornerRadius = 10
@@ -122,7 +122,8 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
             let alert = SCLAlertView()
             alert.addButton("Done") {
                self.loadAd()
-                
+                //self.peopleCountField.text = ""
+                self.textField.text = ""
             }
             alert.showCloseButton = false
             alert.showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
