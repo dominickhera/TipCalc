@@ -42,7 +42,7 @@
 		0B2188C597F273D4D1014F61 /* Pods-Tip Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tip Calc/Pods-Tip Calc.debug.xcconfig"; sourceTree = "<group>"; };
 		250CF71F1C3E150F00F720FE /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		250CF7211C3E2A6B00F720FE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		25EC3CB91C3C9B1600898F1E /* Tip Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25EC3CB91C3C9B1600898F1E /* Tip'd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip'd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25EC3CBC1C3C9B1600898F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25EC3CBE1C3C9B1600898F1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25EC3CC11C3C9B1600898F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		25EC3CBA1C3C9B1600898F1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25EC3CB91C3C9B1600898F1E /* Tip Calc.app */,
+				25EC3CB91C3C9B1600898F1E /* Tip'd.app */,
 				25EC3CCD1C3C9B1600898F1E /* Tip CalcTests.xctest */,
 				25EC3CD81C3C9B1600898F1E /* Tip CalcUITests.xctest */,
 			);
@@ -192,7 +192,7 @@
 			);
 			name = "Tip Calc";
 			productName = "Tip Calc";
-			productReference = 25EC3CB91C3C9B1600898F1E /* Tip Calc.app */;
+			productReference = 25EC3CB91C3C9B1600898F1E /* Tip'd.app */;
 			productType = "com.apple.product-type.application";
 		};
 		25EC3CCC1C3C9B1600898F1E /* Tip CalcTests */ = {
@@ -583,7 +583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Posa.Tip-Calc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tip'd";
 			};
 			name = Debug;
 		};
@@ -597,7 +597,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Posa.Tip-Calc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tip'd";
 			};
 			name = Release;
 		};

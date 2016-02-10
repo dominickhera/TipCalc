@@ -123,7 +123,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
             alert.addButton("Done") {
                self.loadAd()
                 //self.peopleCountField.text = ""
-                self.textField.text = ""
+           //     self.textField.text = ""
             }
             alert.showCloseButton = false
             alert.showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
