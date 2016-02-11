@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25EC3CB81C3C9B1600898F1E"
-               BuildableName = "Tip Calc.app"
+               BuildableName = "Tip&apos;d.app"
                BlueprintName = "Tip Calc"
                ReferencedContainer = "container:Tip Calc.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25EC3CB81C3C9B1600898F1E"
-            BuildableName = "Tip Calc.app"
+            BuildableName = "Tip&apos;d.app"
             BlueprintName = "Tip Calc"
             ReferencedContainer = "container:Tip Calc.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25EC3CB81C3C9B1600898F1E"
-            BuildableName = "Tip Calc.app"
+            BuildableName = "Tip&apos;d.app"
             BlueprintName = "Tip Calc"
             ReferencedContainer = "container:Tip Calc.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25EC3CB81C3C9B1600898F1E"
-            BuildableName = "Tip Calc.app"
+            BuildableName = "Tip&apos;d.app"
             BlueprintName = "Tip Calc"
             ReferencedContainer = "container:Tip Calc.xcodeproj">
          </BuildableReference>
