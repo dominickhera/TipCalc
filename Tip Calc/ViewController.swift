@@ -64,20 +64,20 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
         switch (tipChoice.selectedSegmentIndex) {
         case 0:
             subTip = 10
-            tipField.text = ("10.0%")
+            //tipField.text = ("10.0%")
             break
         case 1:
             subTip = 15
-            tipField.text = ("15.0%")
+          //  tipField.text = ("15.0%")
             break
             
         case 2:
             subTip = 16
-            tipField.text = ("16.0%")
+            //tipField.text = ("16.0%")
             break
         case 3:
             subTip = 20
-            tipField.text = ("20.0%")
+           // tipField.text = ("20.0%")
             break
         case 4:
             let alert = SCLAlertView()
@@ -127,7 +127,7 @@ class ViewController: UIViewController, ADInterstitialAdDelegate {
             }
             alert.showCloseButton = false
             alert.showSuccess("Meal Information", subTitle: "Tip Percentage: \(NSDecimalNumber(double: subTip))%\nCost per Person: \(costPersonMoney)\nTip Amount: \(tipAmountMoney)\nTotal Cost: \(realAmount)")
-  tipField.text = ("\(subTip)%")
+  //tipField.text = ("\(subTip)%")
       /*  tipField.text = ("\(subTip)%")
         costPerPersonLabel.text = (String(costPerson))
         textLabel.text = (String(answer))
