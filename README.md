@@ -2,7 +2,7 @@
 
 Tip'd
 
-A tip calculator created by Dominick Hera
+A simple tip calculator for iOS that allows users to easily calculate the tip for a meal as well as how to split the cost of a meal amongst any number of friends!
 
 
 Dependencies:
